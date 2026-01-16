@@ -4,25 +4,9 @@ from src import number_checker
 
 
 #TODO: Implementáld a Given step-et
-@given('the number is 4')
-def step_given_number(context):
-    context.number = 4
-
-@given('the number is 5')
-def step_given_number(context):
-    context.number = 5
-
-@given('the number is 0')
-def step_given_number(context):
-    context.number = 0
-
-@given('the number is -4')
-def step_given_number(context):
-    context.number = -4
-
-@given('the number is -5')
-def step_given_number(context):
-    context.number = -5
+@given('the number is {number:d}')
+def step_given_number(context, number):
+    context.number = number
 
 
 # TODO: Implementáld a When step-et
@@ -35,5 +19,5 @@ def step_when_check_number(context):
 # TODO: Implementáld a Then step-et
 @then('I should be told "{expected}"')
 def step_then_result(context, expected):
-    assert context.result == expected
+    assert context.result == expected, f"Expected {expected} but got {context.result}"
 
