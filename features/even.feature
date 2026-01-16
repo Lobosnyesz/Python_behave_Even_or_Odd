@@ -11,4 +11,20 @@ Scenario:Páros szám ellenőrzése
   Given the number is 4
   When I check the number
   Then I should be told "even"
+Scenario:Páros szám ellenőrzése
+  Given the number is 5
+  When I check the number
+  Then I should be told "odd"
+Scenario: Nulla ellenőrzése
+  Given the number is 0
+  When I check the number
+  Then I should be told "even"
+Scenario:Negatív páros szám ellenőrzése
+  Given the number is -4
+  When I check the number
+  Then I should be told "even"
+Scenario:Negatív páratlan szám ellenőrzése
+  Given the number is -5
+  When I check the number
+  Then I should be told "odd"
  
