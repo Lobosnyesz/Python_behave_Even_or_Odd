@@ -17,6 +17,8 @@ def check_number(number):
     """
     # TODO: Implementáld a logikát!
     # Használd a modulo operátort (%)
-    # Ha number % 2 == 0, akkor páros → "even"
+    if number % 2 == 0:
+        # Ha number % 2 == 0, akkor páros → "even"
+        return "even"
     # Egyébként páratlan → "odd"
-    pass
+    return "odd"
